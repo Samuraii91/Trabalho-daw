@@ -9,7 +9,7 @@ export default class AlunoController{
         this.caminhoBase = caminhoBase
 
         this.openAdd = async (req, res)=>{
-            res.render(caminhoBase, "add")
+            res.render(caminhoBase + "add")
         }
         this.add = async(req,res)=>{
         //cria aluno
@@ -20,12 +20,12 @@ export default class AlunoController{
                 matricula: req.body.matricula
 
             })
+                res.redirect ('/', caminhoBase, 'add')
         }
-    res.redirect ('/', caminhoBase, 'add')
 
     this.list = async(req, res)=>{
             const resultado = await Aluno.find({})
-            res.render(caminhoBase, 'lst',{Alunos:resultado})
+            res.render(caminhoBase + 'lst', {Alunos:resultado})
         }
     }
 }
