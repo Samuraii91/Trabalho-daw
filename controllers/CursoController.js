@@ -22,7 +22,7 @@ export default class CursoController {
             res.redirect('/' + caminhoBase + 'add')
         }
 
-        this.list = async (req, res) => {
+        this.lst = async (req, res) => {
             const resultado = await Curso.find({})
             res.render(caminhoBase + 'lst', { Cursos: resultado})
         }

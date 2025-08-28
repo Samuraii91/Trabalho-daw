@@ -7,6 +7,7 @@ const caminhobase = 'curso/'
 
 router.get('/' + caminhobase + 'add', controle.openAdd)
 router.post('/' + caminhobase + 'add', controle.add)
-router.get('/' + caminhobase + 'lst', controle.list)
+router.get('/' + caminhobase + 'lst', controle.lst)
 
 export default router;
+    
